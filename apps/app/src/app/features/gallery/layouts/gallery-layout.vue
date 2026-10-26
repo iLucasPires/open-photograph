@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { galleryThemeKey } from '../constants/theme'
+import { galleryThemeKey } from "../constants/theme";
 
-const theme = ref('masonry')
-provide(galleryThemeKey, theme)
+const theme = ref("masonry");
+provide(galleryThemeKey, theme);
 </script>
 
 <template>
@@ -33,7 +33,7 @@ provide(galleryThemeKey, theme)
         class="mx-auto flex max-w-[1440px] items-center gap-2 px-5 py-6 text-xs text-dimmed sm:px-10 lg:px-14"
       >
         <UIcon name="i-lucide-aperture" class="size-4" />
-        <span>Open Photographer</span>
+        <span>Open Photograph</span>
       </div>
     </footer>
   </div>

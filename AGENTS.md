@@ -1,8 +1,8 @@
-# FlowWi — Guia para Agentes de IA
+# OPEN-PHOTOGRAPH — Guia para Agentes de IA
 
-Projeto pessoal. Monorepo (`apps/api` + `apps/app`) com o backend e o frontend do FlowWi.
+Projeto pessoal. Monorepo (`apps/api` + `apps/app`) com o backend e o frontend do OPEN-PHOTOGRAPH.
 
-## O que é o FlowWi
+## O que é o OPEN-PHOTOGRAPH
 
 Uma mistura de **Notion + Formtype/Typeform**, pensada como fluxo de trabalho completo para empresas
 criativas (produção de vídeo, fotografia, marketing, design). A ideia central:
@@ -22,7 +22,7 @@ dados via formulário público e o fluxo que nasce dele.
 ## Estrutura do repositório
 
 ```
-flowwi/
+open-photograph/
 ├── apps/
 │   ├── api/     # Backend — Django + DRF (API REST)
 │   ├── app/     # Frontend — Vue 3 SPA
@@ -44,8 +44,8 @@ têm convenções específicas de cada stack:
 `.claude/skills/` tem skills do Claude Code com o passo a passo das convenções deste projeto (checadas
 contra o código, não só a doc):
 
-- `flowwi-django-domain` — criar um app de domínio/integração novo no backend (`apps/api`)
-- `flowwi-vue-feature` — criar uma feature/componente novo no frontend (`apps/app`), incluindo o mapa de
+- `open-photograph-django-domain` — criar um app de domínio/integração novo no backend (`apps/api`)
+- `open-photograph-vue-feature` — criar uma feature/componente novo no frontend (`apps/app`), incluindo o mapa de
   componentes do Nuxt UI
 
 Já os `.agents/skills` dentro de `apps/app/` são skills de bibliotecas de terceiros (Vue, Pinia, Nuxt UI,

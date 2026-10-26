@@ -66,7 +66,7 @@ class Migration(migrations.Migration):
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
                 ('name', models.CharField(help_text='Nome interno para identificar esta configuração.', max_length=100)),
                 ('style', models.CharField(choices=[('text_diagonal', 'Texto diagonal repetido'), ('image_overlay', 'Imagem sobreposta (logo)'), ('combined', 'Texto diagonal + logo')], default='text_diagonal', max_length=20)),
-                ('text', models.CharField(blank=True, help_text="Texto repetido na grade diagonal. Ex: '© João Silva | flowwi.com'", max_length=200)),
+                ('text', models.CharField(blank=True, help_text="Texto repetido na grade diagonal. Ex: '© João Silva | open-photograph.com'", max_length=200)),
                 ('text_color', models.CharField(default='#FFFFFF', help_text='Cor do texto em hex. Ex: #FFFFFF', max_length=9)),
                 ('text_opacity', models.FloatField(default=0.35, help_text='Opacidade do texto entre 0.0 e 1.0.')),
                 ('font_size_ratio', models.FloatField(default=0.03, help_text='Tamanho da fonte como fração da largura da imagem. Ex: 0.03 = 3% da largura.')),

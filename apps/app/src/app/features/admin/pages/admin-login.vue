@@ -2,24 +2,24 @@
 // ---------------------------------------------------------------------------
 // Composables
 // ---------------------------------------------------------------------------
-const route = useRoute()
+const route = useRoute();
 
 // ---------------------------------------------------------------------------
 // Computed
 // ---------------------------------------------------------------------------
-const destination = computed(getDestination)
+const destination = computed(getDestination);
 
 // ---------------------------------------------------------------------------
 // Funções: computed
 // ---------------------------------------------------------------------------
 
 function getDestination() {
-  const next = route.query.next
-  return typeof next === 'string' &&
-    (next === '/admin' || next.startsWith('/admin/') || next.startsWith('/setup/')) &&
-    next !== '/admin/login'
+  const next = route.query.next;
+  return typeof next === "string" &&
+    (next === "/admin" || next.startsWith("/admin/") || next.startsWith("/setup/")) &&
+    next !== "/admin/login"
     ? next
-    : '/admin/galleries'
+    : "/admin/galleries";
 }
 </script>
 <template>
@@ -27,7 +27,7 @@ function getDestination() {
     <div class="w-full max-w-md space-y-6">
       <div class="flex items-center justify-center gap-2 text-highlighted">
         <UIcon name="i-lucide-aperture" class="size-8 text-primary" />
-        <span class="text-2xl font-semibold">Open Photographer</span>
+        <span class="text-2xl font-semibold">Open Photograph</span>
       </div>
       <UCard :ui="{ header: 'p-6', body: 'p-6' }">
         <template #header>

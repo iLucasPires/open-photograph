@@ -42,7 +42,7 @@ class WatermarkAsset(models.Model):
     text = models.CharField(
         max_length=200,
         blank=True,
-        help_text="Texto repetido na grade diagonal. Ex: '© João Silva | flowwi.com'",
+        help_text="Texto repetido na grade diagonal. Ex: '© João Silva | open-photograph.com'",
     )
 
     text_color = models.CharField(

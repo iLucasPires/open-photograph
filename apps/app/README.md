@@ -1,4 +1,4 @@
-# FlowWi frontend
+# Open Photograph frontend
 
 Vue 3 + Vite. Em produ??o, o build ? inclu?do na imagem Django e servido no mesmo
 dom?nio pelo Railway. Configura??o: [guia Railway](../api/docs/RAILWAY.md).

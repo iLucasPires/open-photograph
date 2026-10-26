@@ -1,9 +1,9 @@
 ---
 name: flowwi-vue-feature
-description: Scaffold a new feature (vertical slice) in the FlowWi Vue 3 frontend (apps/app), or add a component/composable to an existing one, following the feature-based folder structure, routing, auto-import and Nuxt UI conventions. Use when adding a new page/section to the dashboard, a new Vue component, or a new composable.
+description: Scaffold a new feature (vertical slice) in the OPEN-PHOTOGRAPH Vue 3 frontend (apps/app), or add a component/composable to an existing one, following the feature-based folder structure, routing, auto-import and Nuxt UI conventions. Use when adding a new page/section to the dashboard, a new Vue component, or a new composable.
 ---
 
-# FlowWi — Nova feature Vue (`apps/app`)
+# OPEN-PHOTOGRAPH — Nova feature Vue (`apps/app`)
 
 Checklist para adicionar uma feature nova ou estender uma existente em `src/app/`. Detalhe completo em
 `apps/app/AGENTS.md` — esta skill é o passo a passo + as duas regras que mais geram retrabalho se

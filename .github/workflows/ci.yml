@@ -40,13 +40,13 @@ jobs:
       postgres:
         image: postgres:18-alpine
         env:
-          POSTGRES_DB: flowwi
-          POSTGRES_USER: flowwi
-          POSTGRES_PASSWORD: flowwi
+          POSTGRES_DB: open-photograph
+          POSTGRES_USER: open-photograph
+          POSTGRES_PASSWORD: open-photograph
         ports:
           - 5432:5432
         options: >-
-          --health-cmd "pg_isready -U flowwi"
+          --health-cmd "pg_isready -U open-photograph"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -82,9 +82,9 @@ jobs:
             echo "DJANGO_SECRET_KEY=ci-test-secret-key"
             echo "POSTGRES_HOST=localhost"
             echo "POSTGRES_PORT=5432"
-            echo "POSTGRES_DB=flowwi"
-            echo "POSTGRES_USER=flowwi"
-            echo "POSTGRES_PASSWORD=flowwi"
+            echo "POSTGRES_DB=open-photograph"
+            echo "POSTGRES_USER=open-photograph"
+            echo "POSTGRES_PASSWORD=open-photograph"
             echo "REDIS_URL=redis://localhost:6379/0"
             echo "GOOGLE_AI_API_KEY=ci-dummy-key"
           } >> .env

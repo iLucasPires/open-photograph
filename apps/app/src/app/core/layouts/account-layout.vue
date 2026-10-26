@@ -9,7 +9,7 @@
 
     <!-- Footer info -->
     <footer class="mx-auto flex w-full max-w-lg items-center justify-center text-xs text-muted">
-      <span>Open Photographer &mdash; Plataforma de galerias para fotógrafos</span>
+      <span>Open Photograph &mdash; Plataforma de galerias para fotógrafos</span>
     </footer>
   </div>
 </template>

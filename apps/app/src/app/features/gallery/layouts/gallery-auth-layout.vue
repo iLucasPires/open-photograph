@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ title: string; description: string }>()
+defineProps<{ title: string; description: string }>();
 </script>
 
 <template>
@@ -7,7 +7,7 @@ defineProps<{ title: string; description: string }>()
     <div class="w-full max-w-md space-y-8">
       <div class="flex items-center justify-center gap-2.5 text-highlighted">
         <UIcon name="i-lucide-aperture" class="size-5" />
-        <span class="text-xs font-medium tracking-wide">Open Photographer</span>
+        <span class="text-xs font-medium tracking-wide">Open Photograph</span>
       </div>
       <UCard
         :ui="{

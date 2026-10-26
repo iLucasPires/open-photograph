@@ -37,10 +37,10 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 FROM python-base AS runtime
 
 # Usuário não-root e diretórios graváveis
-RUN groupadd --gid 10001 flowwi \
-    && useradd --uid 10001 --gid flowwi --create-home flowwi \
+RUN groupadd --gid 10001 open-photograph \
+    && useradd --uid 10001 --gid open-photograph --create-home open-photograph \
     && mkdir -p /app/static /app/media \
-    && chown flowwi:flowwi /app/static /app/media
+    && chown open-photograph:open-photograph /app/static /app/media
 
 # Dependências Python
 COPY --from=backend-deps /opt/venv /opt/venv
@@ -56,5 +56,5 @@ COPY apps/api/config/ config/
 COPY apps/api/app/ app/
 COPY apps/api/shared/ shared/
 
-USER flowwi
+USER open-photograph
 CMD ["start-worker"]

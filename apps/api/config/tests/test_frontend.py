@@ -9,13 +9,13 @@ class FrontendRoutingTests(SimpleTestCase):
     def test_spa_routes_serve_index(self):
         with TemporaryDirectory() as directory:
             frontend_root = Path(directory)
-            (frontend_root / "index.html").write_text("<html>FlowWi</html>", encoding="utf-8")
+            (frontend_root / "index.html").write_text("<html>OPEN-PHOTOGRAPH</html>", encoding="utf-8")
             with self.settings(FRONTEND_ROOT=frontend_root, SECURE_SSL_REDIRECT=False):
                 for route in ("/", "/admin/galleries", "/g/example"):
                     with self.subTest(route=route):
                         response = self.client.get(route)
                         self.assertEqual(response.status_code, 200)
-                        self.assertEqual(b"".join(response.streaming_content), b"<html>FlowWi</html>")
+                        self.assertEqual(b"".join(response.streaming_content), b"<html>OPEN-PHOTOGRAPH</html>")
                         self.assertEqual(response["Cache-Control"], "no-cache")
 
     def test_backend_urls_use_api_prefix(self):

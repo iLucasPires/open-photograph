@@ -1,6 +1,6 @@
-# FlowWi API
+# OPEN-PHOTOGRAPH API
 
-Backend Django + DRF do [FlowWi](../../README.md).
+Backend Django + DRF do [OPEN-PHOTOGRAPH](../../README.md).
 
 Deploy com PostgreSQL, Redis, worker RQ e bucket S3: [guia Railway](docs/RAILWAY.md).
 

@@ -1,9 +1,9 @@
 ---
 name: flowwi-django-domain
-description: Scaffold a new Django domain/integration app in apps/api following FlowWi's established service/selector/serializer/view pattern and multi-tenancy conventions. Use when adding a new backend resource, a new Django app under apps/domains or apps/integrations, or extending an existing domain with a new model+endpoint.
+description: Scaffold a new Django domain/integration app in apps/api following OPEN-PHOTOGRAPH's established service/selector/serializer/view pattern and multi-tenancy conventions. Use when adding a new backend resource, a new Django app under apps/domains or apps/integrations, or extending an existing domain with a new model+endpoint.
 ---
 
-# FlowWi — Novo domínio Django (`apps/api`)
+# OPEN-PHOTOGRAPH — Novo domínio Django (`apps/api`)
 
 Checklist e padrões verificados contra o código real (não só a documentação) para criar um novo app de
 domínio (`apps/domains/<nome>`) ou integração (`apps/integrations/<nome>`) na API. Para o schema de banco

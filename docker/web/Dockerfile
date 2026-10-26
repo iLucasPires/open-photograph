@@ -21,7 +21,7 @@ RUN corepack enable \
     && corepack prepare pnpm@${PNPM_VERSION} --activate
 
 COPY apps/app/package.json apps/app/pnpm-lock.yaml apps/app/pnpm-workspace.yaml ./
-RUN --mount=type=cache,id=flowwi-pnpm,target=/pnpm/store \
+RUN --mount=type=cache,id=open-photograph-pnpm,target=/pnpm/store \
     pnpm install --frozen-lockfile --store-dir=/pnpm/store
 
 COPY apps/app/ ./
@@ -56,10 +56,10 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 FROM python-base AS runtime
 
 # Usuário não-root e diretórios graváveis
-RUN groupadd --gid 10001 flowwi \
-    && useradd --uid 10001 --gid flowwi --create-home flowwi \
+RUN groupadd --gid 10001 open-photograph \
+    && useradd --uid 10001 --gid open-photograph --create-home open-photograph \
     && mkdir -p /app/static /app/media \
-    && chown flowwi:flowwi /app/static /app/media
+    && chown open-photograph:open-photograph /app/static /app/media
 
 # Dependências Python
 COPY --from=backend-deps /opt/venv /opt/venv
@@ -78,6 +78,6 @@ COPY apps/api/shared/ shared/
 # Build do frontend (mais mutável, por último)
 COPY --from=frontend-build /frontend/dist/ frontend/
 
-USER flowwi
+USER open-photograph
 EXPOSE 8000
 CMD ["start-web"]

@@ -17,7 +17,7 @@ docker/
 Os Dockerfiles s?o independentes para permitir builds diretos no Railway, sem
 publicar uma imagem base separadamente. Mantenha as vers?es Python/uv e as etapas
 de instala??o do backend alinhadas entre ambos. Cada build usa os lockfiles e
-executa como `flowwi` (UID/GID 10001). Node, pnpm e uv ficam nas etapas de build.
+executa como `open-photograph` (UID/GID 10001). Node, pnpm e uv ficam nas etapas de build.
 
 O `.dockerignore` da raiz limita o contexto aos fontes necess?rios e exclui `.env`,
 ambientes virtuais e depend?ncias locais. Os caches de pnpm/uv ficam no BuildKit.
@@ -25,8 +25,8 @@ ambientes virtuais e depend?ncias locais. Os caches de pnpm/uv ficam no BuildKit
 ## Build
 
 ```sh
-docker build -f docker/web/Dockerfile -t flowwi-web:local .
-docker build -f docker/worker/Dockerfile -t flowwi-worker:local .
+docker build -f docker/web/Dockerfile -t open-photograph-web:local .
+docker build -f docker/worker/Dockerfile -t open-photograph-worker:local .
 ```
 
 O web aceita `NODE_VERSION`, `PYTHON_VERSION`, `PNPM_VERSION` e `UV_VERSION` via
@@ -41,14 +41,14 @@ container. Web e worker devem usar o mesmo banco, Redis e storage.
 Aplique migrations antes de iniciar uma nova vers?o:
 
 ```sh
-docker run --rm --env-file apps/api/.env flowwi-web:local python manage.py migrate --noinput
+docker run --rm --env-file apps/api/.env open-photograph-web:local python manage.py migrate --noinput
 ```
 
 Inicie cada servi?o em um terminal:
 
 ```sh
-docker run --rm --env-file apps/api/.env -p 8000:8000 flowwi-web:local
-docker run --rm --env-file apps/api/.env flowwi-worker:local
+docker run --rm --env-file apps/api/.env -p 8000:8000 open-photograph-web:local
+docker run --rm --env-file apps/api/.env open-photograph-worker:local
 ```
 
 O web coleta est?ticos e inicia Daphne na porta `${PORT:-8000}`. O worker inicia

@@ -1,4 +1,4 @@
-# FlowWi
+# OPEN-PHOTOGRAPH
 
 Aplica??o de galerias de fotografia com Vue 3 e Django, publicada no Railway.
 

@@ -1,59 +1,59 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from "@nuxt/ui";
 
-const open = ref(false)
+const open = ref(false);
 
 const navItems = computed<NavigationMenuItem[][]>(() => [
   [
     {
-      label: 'Vendas',
-      icon: 'i-lucide-chart-no-axes-combined',
-      to: '/admin/sales',
+      label: "Vendas",
+      icon: "i-lucide-chart-no-axes-combined",
+      to: "/admin/sales",
     },
     {
-      label: 'Clientes',
-      icon: 'i-lucide-users',
-      to: '/admin/clients',
+      label: "Clientes",
+      icon: "i-lucide-users",
+      to: "/admin/clients",
     },
     {
-      label: 'Galerias',
-      icon: 'i-lucide-images',
-      to: '/admin/galleries',
+      label: "Galerias",
+      icon: "i-lucide-images",
+      to: "/admin/galleries",
     },
     {
-      label: 'Tags',
-      icon: 'i-lucide-tags',
-      to: '/admin/tags',
+      label: "Tags",
+      icon: "i-lucide-tags",
+      to: "/admin/tags",
     },
     {
       label: "Marcas d'água",
-      icon: 'i-lucide-stamp',
-      to: '/admin/settings/watermark',
+      icon: "i-lucide-stamp",
+      to: "/admin/settings/watermark",
     },
   ],
   [
     {
-      label: 'Configurações',
-      type: 'label',
+      label: "Configurações",
+      type: "label",
     },
     {
-      label: 'Drive',
-      icon: 'i-lucide-hard-drive',
-      to: '/admin/settings/drive',
+      label: "Drive",
+      icon: "i-lucide-hard-drive",
+      to: "/admin/settings/drive",
     },
     {
-      label: 'Prévias',
-      icon: 'i-lucide-image',
-      to: '/admin/settings/previews',
+      label: "Prévias",
+      icon: "i-lucide-image",
+      to: "/admin/settings/previews",
     },
 
     {
-      label: 'Pagamento',
-      icon: 'i-lucide-credit-card',
-      to: '/admin/settings/payment',
+      label: "Pagamento",
+      icon: "i-lucide-credit-card",
+      to: "/admin/settings/payment",
     },
   ],
-])
+]);
 </script>
 
 <template>
@@ -78,11 +78,11 @@ const navItems = computed<NavigationMenuItem[][]>(() => [
       <template #header="{ collapsed }">
         <RouterLink
           to="/admin/galleries"
-          aria-label="Open Photographer — Galerias"
+          aria-label="Open Photograph — Galerias"
           class="flex items-center gap-2.5 text-highlighted"
         >
           <UIcon name="i-lucide-aperture" class="size-5 shrink-0" />
-          <span v-if="!collapsed" class="text-sm font-medium tracking-wide">Open Photographer</span>
+          <span v-if="!collapsed" class="text-sm font-medium tracking-wide">Open Photograph</span>
         </RouterLink>
       </template>
       <template #default="{ collapsed }">

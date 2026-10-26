@@ -2,7 +2,7 @@
   <div class="min-h-dvh bg-muted/40">
     <header class="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-6 sm:px-8">
       <UIcon name="i-lucide-aperture" class="size-8 text-primary" />
-      <span class="text-xl font-semibold tracking-tight text-highlighted">Open Photographer</span>
+      <span class="text-xl font-semibold tracking-tight text-highlighted">Open Photograph</span>
       <UBadge label="Configuração inicial" color="neutral" variant="subtle" class="ml-auto" />
     </header>
     <main
@@ -12,7 +12,7 @@
       <div class="min-w-0"><RouterView /></div>
     </main>
     <footer class="mx-auto max-w-6xl px-4 pb-6 text-center text-xs text-muted sm:px-8">
-      Open Photographer &mdash; Suas fotos, seu espaço.
+      Open Photograph &mdash; Suas fotos, seu espaço.
     </footer>
   </div>
 </template>

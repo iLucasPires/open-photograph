@@ -1,9 +1,9 @@
 ---
 name: flowwi-editorial-design
-description: Apply FlowWi's editorial visual style to Vue and Nuxt UI screens, including galleries, admin pages, tables and dialogs. Use when creating or refining FlowWi interfaces or when the user requests this established style.
+description: Apply OPEN-PHOTOGRAPH's editorial visual style to Vue and Nuxt UI screens, including galleries, admin pages, tables and dialogs. Use when creating or refining OPEN-PHOTOGRAPH interfaces or when the user requests this established style.
 ---
 
-# FlowWi editorial design
+# OPEN-PHOTOGRAPH editorial design
 
 Use the established photography gallery as the visual reference: quiet surfaces, generous whitespace,
 large serif page titles, small spaced uppercase eyebrows, and restrained neutral controls.
@@ -11,7 +11,7 @@ Preserve the functional density of admin screens; photos and useful data remain 
 
 ## Locate the implementation
 
-In the FlowWi repository, read `apps/app/AGENTS.md` (or `app/AGENTS.md` when working from `apps`).
+In the OPEN-PHOTOGRAPH repository, read `apps/app/AGENTS.md` (or `app/AGENTS.md` when working from `apps`).
 Within the frontend, inspect these paths before extending their patterns:
 
 - `src/app/features/gallery/layouts/gallery-layout.vue`: public header, main container and footer.

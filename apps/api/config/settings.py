@@ -389,8 +389,8 @@ if not DEBUG:
 # Spectacular
 # -----------------------------------------------------------------------------
 SPECTACULAR_SETTINGS = {
-    "TITLE": "FlowWi API",
-    "DESCRIPTION": "FlowWi API",
+    "TITLE": "OPEN-PHOTOGRAPH API",
+    "DESCRIPTION": "OPEN-PHOTOGRAPH API",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
 }
